@@ -1,0 +1,192 @@
+body, html {
+  height: 100%;
+    background-image: url("../images/v.jpg");
+    background-size: 100% 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #111;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-align: center;
+          align-items: center;
+  align-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.container {
+  width: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+    background-color: inherit;
+}
+
+.btn {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 44px;
+  font-size: 36px;
+  position: relative;
+background: transparent;
+}
+.btn::before {
+  -webkit-transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: '';
+  width: 30%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn .btn-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+.btn:hover::before {
+  background: black;
+  width: 100%;
+}
+.btn.rounded {
+  border-radius: 50px;
+}
+.btn.rounded .text-green {
+  color: #00F0B5;
+  mix-blend-mode: difference;
+}
+.btn.rounded::before {
+  border-radius: 50px;
+  width: 25%;
+  background: #00F0B5;
+}
+.btn.rounded:hover::before {
+  background: #00F0B5;
+  width: 100%;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btns {
+  position: relative;
+  letter-spacing: 0.25em;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: #333333;
+    margin-top: 4vh
+}
+.btns::after, .btns::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
+}
+.btns::before {
+  background-color: #ffff00;
+  top: -1rem;
+  left: 0rem;
+}
+.btns::after {
+  background-color: #8a19ff;
+  top: 1rem;
+  left: 8rem;
+}
+.btns:hover::before, .btns:hover::after {
+  top: 0;
+  -webkit-transform: skewx(0deg);
+          transform: skewx(0deg);
+}
+.btns:hover::after {
+  left: 0rem;
+}
+.btns:hover::before {
+  left: 8.75rem;
+}
+:root {
+    --color: #eee;
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+    padding: 1.5rem 0;
+    filter: url('#goo');
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    margin-left: 50px;
+}
+
+.button:before,
+.button:after {
+    width: 4.4em;
+    height: 2.95em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: var(--color);
+    border-radius: 50%;
+    transition: transform 1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+}
+
+
+/* Demo styles */
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg)
+}

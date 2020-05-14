@@ -1,0 +1,118 @@
+html,body
+{
+    height: 100%;
+    background-image:url("../images/smily.jpg");
+        
+}
+body
+{
+    margin:0;
+    padding:0;
+    display:grid;
+    height: 100%;
+    place-items:center;
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container
+{
+    position:relative;
+    perspective:50em;
+    display:grid;
+    transform-style:preserve-3d;
+    font-family:sans-serif;
+}
+.card
+{
+        grid-area:1/1;
+    height: 500px;
+    width: 600px;
+    transform:translateX(10px) rotateY(25deg) rotateX(10deg);
+    justify-content:center;
+    padding: 50px;
+    font-size: 20px;
+    font-weight: 900;
+    background-image:url(.jpg);
+    backface-visibility: hidden;
+    box-shadow: 0 10px 30px -3px rgba(0,0,0,1);
+    opacity:1;
+    cursor:pointer;
+        
+}
+h1{
+    margin:-2vh;
+    font-size: 80px;
+    font-weight:100;
+    text-align: center;
+    font-family: "Arizonia";
+    text-shadow: 1px 1px 1px black,2px 2px 1px black;
+    background-size:100%;
+    color:whitesmoke;
+}
+.card .namespan
+{
+    color:#000;
+    display:inline-grid;
+    transform: translate(1px) scale(0.75);
+    font-size: 50px;
+}
+h2{
+    font-size: 50px;
+    font-weight:100;
+    text-align:center;
+    font-family: "Arizonia";
+    text-shadow: 1px 1px 1px black,2px 2px 1px black;
+    background-size:100%;
+    margin:50px -5vh;
+    color:whitesmoke;
+}
+h3
+{
+    margin: -6vh;
+    font-size: 50px;
+    font-weight:100;
+    font-family: "Arizonia";
+    text-shadow: 1px 1px 1px black,2px 2px 1px black;
+    margin-left:10px;
+    background-size:100%;
+    color:whitesmoke;
+}
+h4
+{
+    margin: -6vh;
+    font-size: 40px;
+    font-weight:100;
+    font-family: "Arizonia";
+    text-shadow: 1px 1px 1px black,2px 2px 1px black;
+    background-size:100%;
+    color:whitesmoke;
+}
+.container:before
+{
+    --bw:10px;
+    content: '';
+    grid-area:1/1;
+    backface-visibility: hidden;
+    height:100%;
+    width:100%;
+    margin-top: calc(-1*var(--bw));
+    background: transparent;
+    transform:translateX(-61px) rotateY(-30deg) rotateX(15deg)
+        scale(1.2);
+    pointer-events: none;
+    border: var(--bw) solid #4b464d ;
+    box-sizing: content-box;
+}
+.container:hover>div,
+.container:hover:before
+{
+    transform: none;
+    opacity:1;
+}
+.container>div,.container:before
+{
+    will-change: transform;
+    transition: 0.3s transform  ccubic-bezier(1,.46,.45,1);
+}
