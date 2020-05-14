@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lan="en" >
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <title>3D card cutout effect</title>
+    <link rel="stylesheet" type="text/css" href="css/styl.css">
+    <script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name= name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    function hell()
+    {    
+    var sn = getParameterByName('name');
+    
+    document.getElementById("namespan").innerHTML = sn;
+    }
+</script>
+    </head>
+        <body onload="hell()">
+            <div class="container">
+            <div class="card">
+                <h3><p style="text align:left;">Dear</p></h3>
+            <h1>
+                <span id="namespan"></span>
+                
+                </h1>
+                <h2>
+                <p>In the World full of pain and stress. try always to smile.becaz, its precious and it costs nothing.maybe someone is waiting for ur smile 😉.
+                    </p>
+                    <h4><p style="text-align:right;">-by vijju💘 	</p></h4>
+                    
+                </h2>
+            </div>
+        </div></body>
+</html>
