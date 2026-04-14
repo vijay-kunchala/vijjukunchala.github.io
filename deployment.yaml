@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vijju-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vijju-app
+  template:
+    metadata:
+      labels:
+        app: vijju-app
+    spec:
+      containers:
+        - name: vijju-app
+          image: 211125534402.dkr.ecr.eu-west-2.amazonaws.com/vijju-webapp:main
+          ports:
+            - containerPort: 80

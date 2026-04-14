@@ -1,0 +1,8 @@
+dockerfile
+.dockerignore
+deployment.yaml
+service.yaml
+.github
+.DS_Store
+*.tfstate
+*.tfstate.backup
